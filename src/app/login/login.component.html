@@ -1,0 +1,134 @@
+<div style="background-color: black; height: 100vh; margin: 0; padding: 0;" >
+  <form (ngSubmit)="onSubmit()" [formGroup]="signInForm">
+    <div class="container ">
+      <div class="row ">
+        <div class="col  d-flex justify-content-center align-items-center">
+          <div class="imgcontainer d-flex justify-content-center align-items-center ">
+            <img src="../../assets/images/logo.jpg" style="width: 630px;">
+            <div class="container " style="width: 400px;">
+              <div class="centered-text">
+                <h4 style="color:white" text="Centered">Admin Login</h4>
+              </div>
+              <br>
+
+              <label for="username" style="color:white">Email</label>
+              <input class="form-control" formControlName="emailID" type="email"
+                [ngClass]="{error : getControl('emailID')?.errors && getControl('emailID')?.touched}" />
+                
+
+              <div *ngIf="getControl('emailID')?.errors && getControl('emailID')?.touched">
+                <small class="text-danger" *ngIf="getControl('emailID')?.errors">
+                  You must enter a valid email.
+                </small>
+
+              </div>
+
+              <label for="password" style="color:white">Password</label>
+              <input class="form-control" formControlName="loginPassword" type="password" style="font-size: 10px;"
+                [ngClass]="{error : getControl('loginPassword')?.errors && getControl('loginPassword')?.touched}" />
+
+              <div *ngIf="getControl('loginPassword')?.errors && getControl('loginPassword')?.touched">
+                <small class="text-danger" *ngIf="getControl('loginPassword')?.errors?.['required']">
+                  Password is required
+                </small>
+
+              </div>
+              <br>
+
+
+
+              <button type="submit">Login</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="content" style="margin-top: 90px;">
+    <div class="container" style="padding: 20px;">
+      <div class="row align-items-center my-4 px-2">
+        <div class="col-md-6">
+          <img src="../../assets/images/loginnn.jpg" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-md-6 contents">
+          
+          <form  (ngSubmit)="onSubmit()" [formGroup]="signInForm">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="mb-4">
+                <h3>Log In</h3>
+              </div>
+                <div class="form-group first">
+                  <label for="username">Email</label>
+                  <input class="form-control" formControlName="emailID" type="email"[ngClass]="{error : getControl('emailID')?.errors && getControl('emailID')?.touched}" />
+        
+                  <div *ngIf="getControl('emailID')?.errors && getControl('emailID')?.touched">
+                    <small class="text-danger" *ngIf="getControl('emailID')?.errors">
+                      You must enter a valid email.
+                    </small>
+                    
+                  </div>
+    
+                </div>
+                <div class="form-group last mb-4">
+                  <label for="password">Password</label>
+                  <input class="form-control" formControlName="loginPassword" type="password" [ngClass]="{error : getControl('loginPassword')?.errors && getControl('loginPassword')?.touched}" />
+  
+        <div *ngIf="getControl('loginPassword')?.errors && getControl('loginPassword')?.touched">
+          <small class="text-danger" *ngIf="getControl('loginPassword')?.errors?.['required']">
+            Password is required
+          </small>
+          
+        </div>
+  
+                  
+                </div>
+                
+                <div class="d-flex mb-2 align-items-center">
+                  <label class="control control--checkbox mb-0 "><span class="caption">Remember me</span>
+                    <input type="checkbox" class="ml-2" checked="checked"/>
+                    <div class="control__indicator"></div>
+                  </label>
+                  <span class="ml-auto"><a routerLink="/app-forgot-password" class="forgot-pass">Forgot Password?</a></span> 
+                </div>
+  
+                <div class="d-flex mb-5 align-items-center">
+                  <span class="ml-auto"><a routerLink="/EReg" class="forgot-pass">Ecom Register</a></span> 
+                  <span class="ml-auto"><a routerLink="/franchise-reg" class="forgot-pass">Franchise Register</a></span> 
+                </div>
+    
+                <input type="submit" value="Log In" class="btn btn-block btn-primary">
+    
+                <!-- <span class="d-block text-left my-4 text-muted">&mdash; or login with &mdash;</span> --
+                
+                <div class="social-login">
+                  <a href="#" class="facebook">
+                    <span class="icon-facebook mr-3"></span> 
+                  </a>
+                  <a href="#" class="twitter">
+                    <span class="icon-twitter mr-3"></span> 
+                  </a>
+                  <a href="#" class="google">
+                    <span class="icon-google mr-3"></span> 
+                  </a>
+                </div>
+              </div>
+            </div>
+          </form>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div> -->

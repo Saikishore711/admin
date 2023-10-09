@@ -1,0 +1,41 @@
+.imgcontainer {
+  background-color: black;
+
+
+  
+}
+.imgcontainer img{
+  opacity: 0.7;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #040404;
+  box-sizing: border-box;
+
+}
+
+button {
+  background-color: gold;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.container {
+  width: 100%; /* Set the width to 100% to make it span the full width of the viewport */
+  padding: 0; /* Remove any padding */
+  margin: 0;
+  background-color: black; 
+  overflow: hidden;/* Remove any margin */
+}
+.centered-text {
+  text-align: center;
+  
+  justify-content: center;
+}
