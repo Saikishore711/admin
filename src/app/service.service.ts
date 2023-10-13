@@ -8,7 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ServiceService {
 
-  private apiUrl = 'http://localhost:5175/DBClass'; // Replace with your API URL
+  // private apiUrl = 'http://localhost:5175/DBClass'; // Replace with your API URL
+  private apiUrl = 'http://api.makarenagroup.com/DBClass'; // Replace with your API URL
 
   constructor(private http: HttpClient) {}
 

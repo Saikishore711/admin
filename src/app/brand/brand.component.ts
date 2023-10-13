@@ -60,7 +60,8 @@ export class BrandComponent {
     console.log('Search text:', this.searchText);
   
     // Make an HTTP GET request to your API with the searchText
-    this.http.get<any[]>(`http://localhost:5175/DBClass/GetBrandDetails/${this.searchText}`).subscribe(
+    // this.http.get<any[]>(`http://localhost:5175/DBClass/GetBrandDetails/${this.searchText}`).subscribe(
+    this.http.get<any[]>(`http://api.makarenagroup.com/DBClass/GetBrandDetails/${this.searchText}`).subscribe(
       (response) => {
         console.log('Response:', response); // Check the response from the API
   

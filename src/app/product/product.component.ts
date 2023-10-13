@@ -199,7 +199,9 @@ editedData: any = {
   
     // Send a POST request to your API to add the product with image
     this.http
-      .post<any>('http://localhost:5175/DBClass/AddProductDetails', formData, { headers: headers })
+    // .post<any>('http://localhost:5175/DBClass/AddProductDetails', formData, { headers: headers })
+
+      .post<any>('http://api.makarenagroup.com/DBClass/AddProductDetails', formData, { headers: headers })
       .subscribe(
         (response) => {
           // Handle the successful response from the API

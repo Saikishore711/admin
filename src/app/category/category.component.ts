@@ -64,7 +64,9 @@ editedData: any = {};
     console.log('Search text:', this.searchText);
   
     // Make an HTTP GET request to your API with the searchText
-    this.http.get<any[]>(`http://localhost:5175/DBClass/GetCategory/${this.searchText}`).subscribe(
+    // this.http.get<any[]>(`http://localhost:5175/DBClass/GetCategory/${this.searchText}`).subscribe(
+
+    this.http.get<any[]>(`http://api.makarenagroup.com/DBClass/GetCategory/${this.searchText}`).subscribe(
       (response) => {
         console.log('Response:', response); // Check the response from the API
   
